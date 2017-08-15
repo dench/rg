@@ -500,12 +500,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/dench/yii2-image.git",
-                "reference": "64d559c32ad59cc89cc3d42bffbca3fe282d2679"
+                "reference": "8a93ec659525dcd5334b245354fbb3720cc67a6c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/dench/yii2-image/zipball/64d559c32ad59cc89cc3d42bffbca3fe282d2679",
-                "reference": "64d559c32ad59cc89cc3d42bffbca3fe282d2679",
+                "url": "https://api.github.com/repos/dench/yii2-image/zipball/8a93ec659525dcd5334b245354fbb3720cc67a6c",
+                "reference": "8a93ec659525dcd5334b245354fbb3720cc67a6c",
                 "shasum": ""
             },
             "require": {
@@ -535,7 +535,7 @@
                 "image",
                 "yii2"
             ],
-            "time": "2017-08-11 09:05:07"
+            "time": "2017-08-15 08:55:30"
         },
         {
             "name": "dench/yii2-language",
@@ -543,12 +543,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/dench/yii2-language.git",
-                "reference": "0d8fabed43e9a0ea5897934133fa930e132b504c"
+                "reference": "386e7500109acac1f78d0daa66ecb1a3193c75ef"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/dench/yii2-language/zipball/0d8fabed43e9a0ea5897934133fa930e132b504c",
-                "reference": "0d8fabed43e9a0ea5897934133fa930e132b504c",
+                "url": "https://api.github.com/repos/dench/yii2-language/zipball/386e7500109acac1f78d0daa66ecb1a3193c75ef",
+                "reference": "386e7500109acac1f78d0daa66ecb1a3193c75ef",
                 "shasum": ""
             },
             "require": {
@@ -578,7 +578,7 @@
                 "language",
                 "yii2"
             ],
-            "time": "2017-08-11 09:05:37"
+            "time": "2017-08-15 08:04:53"
         },
         {
             "name": "dench/yii2-page",

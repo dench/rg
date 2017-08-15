@@ -12,6 +12,8 @@ return [
     ],
     'image' => [
         'path' => 'image',
+        'jpeg_quality' => 100,
+        'convert' => true,
         'watermark' => [
             'enabled' => true,
             'absolute' => false,
@@ -38,6 +40,14 @@ return [
                 'width' => 400,
                 'height' => 400,
                 'method' => 'crop',
+                'watermark' => [
+                    'enabled' => false,
+                ],
+            ],
+            'fill' => [
+                'width' => 400,
+                'height' => 400,
+                'method' => 'fill',
                 'watermark' => [
                     'enabled' => false,
                 ],
