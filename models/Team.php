@@ -87,4 +87,9 @@ class Team extends ActiveRecord
    {
        return $this->hasOne(Image::className(), ['id' => 'image_id']);
    }
+
+   public static function getMembers()
+   {
+       return self::find()->where(['enabled' => 1])->orderBy(['position'])->all();
+   }
 }

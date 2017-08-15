@@ -36,7 +36,7 @@ class SiteController extends Controller
     {
         Page::viewPage('index');
 
-        $members = Team::find()->where(['enabled' => 1])->all();
+        $members = Team::getMembers();
 
         return $this->render('index', [
             'members' => $members,
