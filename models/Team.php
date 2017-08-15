@@ -90,6 +90,6 @@ class Team extends ActiveRecord
 
    public static function getMembers()
    {
-       return self::find()->where(['enabled' => 1])->orderBy(['position'])->all();
+       return self::find()->where(['enabled' => 1])->orderBy(['position' => SORT_ASC])->all();
    }
 }
