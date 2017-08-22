@@ -23,9 +23,19 @@ return [
         ],
         'none' => '/img/none.png',
         'size' => [
+            'small' => [
+                'width' => 320,
+                'height' => 240,
+                'method' => 'crop',
+            ],
             'normal' => [
-                'width' => 800,
-                'height' => 600,
+                'width' => 640,
+                'height' => 480,
+                'method' => 'clip',
+            ],
+            'big' => [
+                'width' => 1200,
+                'height' => 900,
                 'method' => 'clip',
             ],
             'member' => [

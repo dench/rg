@@ -29,6 +29,7 @@ $max-lg: $min-lg - 1;
 
 img {
   vertical-align: middle;
+  max-width: 100%;
 }
 
 html {
@@ -346,6 +347,13 @@ footer {
     padding: 14px;
     bottom: 25px;
     left: 165px;
+  }
+}
+
+.images {
+  .image {
+    display: inline-block;
+    margin: 5px;
   }
 }
 

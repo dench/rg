@@ -2,7 +2,8 @@
   box-sizing: border-box; }
 
 img {
-  vertical-align: middle; }
+  vertical-align: middle;
+  max-width: 100%; }
 
 html {
   min-height: 100%; }
@@ -250,6 +251,10 @@ footer {
     padding: 14px;
     bottom: 25px;
     left: 165px; }
+
+.images .image {
+  display: inline-block;
+  margin: 5px; }
 
 @media (min-width: 568px) {
   nav .toggle {
