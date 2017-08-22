@@ -28,7 +28,7 @@ class m170814_144813_create_team_table extends Migration
             'description' => $this->string(),
         ], $tableOptions);
 
-        $this->addForeignKey('fk-team-image_id', 'team', 'image_id', 'image', 'id', 'CASCADE');
+        $this->addForeignKey('fk-team-image_id', 'team', 'image_id', 'image', 'id', 'SET NULL');
 
         $this->addPrimaryKey('pk_team_lang', 'team_lang', ['team_id', 'lang_id']);
 

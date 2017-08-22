@@ -29,7 +29,7 @@ SiteAsset::register($this);
 <header>
     <nav>
         <a class="logo" href="/"><img src="img/remotegames.png" alt=""></a>
-        <a class="brand" href="/">Remote Games</a>
+        <a class="brand" href="/"><?= Yii::$app->name ?></a>
         <div class="toggle">
             <ul>
                 <li class="active"><a href="<?= Url::to(['site/page', 'slug' => 'areas']) ?>">Areas</a></li>
@@ -47,7 +47,7 @@ SiteAsset::register($this);
 </div>
 <footer>
     <div class="container">
-        <a href="<?= Url::home() ?>">Remote Games</a> © 2017
+        <a href="<?= Url::home() ?>"><?= Yii::$app->name ?></a> © 2016-2017
     </div>
 </footer>
 <?= $this->render('_counters') ?>

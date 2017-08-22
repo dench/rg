@@ -2,6 +2,7 @@
 
 namespace app\admin\controllers;
 
+use dench\image\models\Image;
 use dench\sortable\actions\SortingAction;
 use Yii;
 use app\models\Team;
@@ -83,12 +84,25 @@ class TeamController extends Controller
 
         $model->loadDefaultValues();
 
-        if ($model->load(Yii::$app->request->post()) && $model->save()) {
+        if ($post = Yii::$app->request->post()) {
+            $model->load($post);
+            /** @var Image $image */
+            if ($image = $model->image) {
+                $image->load($post);
+            }
 
-            // TODO: Image name alt save
+            $error = [];
+            if (!$model->validate()) $error['model'] = $model->errors;
+            if ($image && !$image->validate()) $error['image'] = $image->errors;
 
-            Yii::$app->session->setFlash('success', Yii::t('app', 'Information added successfully.'));
-            return $this->redirect(['index']);
+            if (empty($error)) {
+                if ($image) {
+                    $image->save(false);
+                }
+                $model->save(false);
+                Yii::$app->session->setFlash('success', Yii::t('app', 'Information added successfully.'));
+                return $this->redirect(['index']);
+            }
         }
 
         return $this->render('create', [
@@ -106,12 +120,31 @@ class TeamController extends Controller
     {
         $model = $this->findModelMulti($id);
 
-        if ($model->load(Yii::$app->request->post()) && $model->save()) {
+        if ($post = Yii::$app->request->post()) {
+            $old_id = $model->image_id;
+            $model->image_id = null;
+            $model->load($post);
+            /** @var Image $image */
+            if ($image = $model->image) {
+                $image->load($post);
+            }
+            $deleted_id = ($old_id != $model->image_id) ? $old_id : null;
 
-            // TODO: Image name alt save
+            $error = [];
+            if (!$model->validate()) $error['model'] = $model->errors;
+            if ($image && !$image->validate()) $error['image'] = $image->errors;
 
-            Yii::$app->session->setFlash('success', Yii::t('app', 'Information added successfully.'));
-            return $this->redirect(['index']);
+            if (empty($error)) {
+                if ($image) {
+                    $image->save(false);
+                }
+                if ($deleted_id && $deleted_image = Image::findOne($deleted_id)) {
+                    $deleted_image->delete();
+                }
+                $model->save(false);
+                Yii::$app->session->setFlash('success', Yii::t('app', 'Information has been saved successfully.'));
+                return $this->redirect(['index']);
+            }
         }
 
         return $this->render('update', [

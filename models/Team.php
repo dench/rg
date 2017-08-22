@@ -21,6 +21,10 @@ use yii\db\ActiveRecord;
  *
  * @property string $name
  * @property string $description
+ *
+ * Relations
+ *
+ * @property Image $image
  */
 class Team extends ActiveRecord
 {
@@ -80,7 +84,7 @@ class Team extends ActiveRecord
     }
 
     /**
-     * @return MultilingualQuery|\yii\db\ActiveQuery
+     * @return Image|\yii\db\ActiveQuery
      * @return \yii\db\ActiveQuery
      */
    public function getImage()
