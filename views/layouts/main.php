@@ -32,7 +32,7 @@ SiteAsset::register($this);
         <a class="brand" href="/"><?= Yii::$app->name ?></a>
         <div class="toggle">
             <ul>
-                <li class="active"><a href="<?= Url::to(['site/page', 'slug' => 'areas']) ?>">Areas</a></li>
+                <li class="active"><a href="<?= Url::to(['site/page', 'slug' => 'arenas']) ?>">Arenas</a></li>
                 <li><a href="<?= Url::to(['site/page', 'slug' => 'technologies']) ?>">Technologies</a></li>
             </ul>
             <ul>
