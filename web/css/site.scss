@@ -42,7 +42,7 @@ body {
   margin: 0;
   min-height: 100vh;
   background: url("../img/bg1.jpg") top center no-repeat #FFFFFF;
-  background-size: contain;
+  background-size: 100%;
 }
 
 h1 {
@@ -55,7 +55,7 @@ h1 {
 
 .page-container {
   min-height: 100vh;
-  padding: 0 0 100px 0;
+  padding: 0 0 140px 0;
 }
 
 .container {
@@ -247,6 +247,7 @@ section {
   }
   &.b5 {
     background-color: #313946;
+    margin-bottom: -40px;
     .row {
       margin: -8px;
       hr {

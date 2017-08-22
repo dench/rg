@@ -28,7 +28,7 @@ SiteAsset::register($this);
 <?php $this->beginBody() ?>
 <header>
     <nav>
-        <a class="logo" href="/"><img src="img/logo.png" alt=""></a>
+        <a class="logo" href="/"><img src="img/remotegames.png" alt=""></a>
         <a class="brand" href="/">Remote Games</a>
         <div class="toggle">
             <ul>
@@ -41,18 +41,6 @@ SiteAsset::register($this);
             </ul>
         </div>
         <button><i></i><i></i><i></i></button>
-        <div class="lang dropdown">
-            <a><?= Language::$current->name ?></a>
-            <?= Lang::widget([
-                'id' => null,
-                'tag' => 'div',
-                'options' => [],
-                'itemTag' => null,
-                'linkOptions' => [],
-                'current' => Language::getCurrent(),
-                'langs' => Language::nameList(),
-            ]) ?>
-        </div>
     </nav>
 </header>
 <?= $content ?>
