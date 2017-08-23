@@ -198,7 +198,10 @@ section {
           section.b5 .col + .col + .col + .col + .col + .col {
             margin-left: 0; } }
     section.b5 img {
-      width: 100%; }
+      width: 100%;
+      filter: grayscale(100%); }
+      section.b5 img:hover {
+        filter: grayscale(0); }
     section.b5 .name {
       white-space: nowrap;
       font-weight: bold;

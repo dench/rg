@@ -284,6 +284,10 @@ section {
     }
     img {
       width: 100%;
+      filter: grayscale(100%);
+      &:hover {
+        filter: grayscale(0);
+      }
     }
     .name {
       white-space: nowrap;
