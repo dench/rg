@@ -36,6 +36,12 @@ $config = [
                 'sitemap.xml' => 'sitemap/index',
             ],
         ],
+        'reCaptcha' => [
+            'name' => 'reCaptcha',
+            'class' => 'himiklab\yii2\recaptcha\ReCaptcha',
+            'siteKey' => $params['recaptchaSiteKey'],
+            'secret' => $params['recaptchaSecretKey'],
+        ],
         'assetManager' => [
             'class' => 'yii\web\AssetManager',
             'bundles' => [

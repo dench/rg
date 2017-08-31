@@ -1,4 +1,6 @@
 $main-color: #15C5D0 !default;
+$main-color-darker: #14a8b3 !default;
+$main-color-darker-over: #148e99 !default;
 $main-color-dim: rgba(220, 253, 255, 0.8) !default;
 $font-color: #7d7b7b !default;
 $link-color: #ffffff !default;
@@ -317,7 +319,7 @@ hr {
 }
 
 footer {
-  line-height: 100px;
+  height: 100px;
   margin-top: -100px;
   text-align: center;
   background-color: #0E0E18;
@@ -325,6 +327,21 @@ footer {
   a {
     color: #666666;
     text-decoration: none;
+  }
+  .contact-us {
+    color: #DDD;
+    border: 1px solid #333;
+    border-radius: 3px;
+    padding: 4px 20px 6px 20px;
+    &:hover {
+      background: #000;
+    }
+  }
+  .row {
+    .col {
+      padding: 33px 15px;
+      width: 33.3%;
+    }
   }
 }
 
@@ -358,6 +375,49 @@ footer {
   .image {
     display: inline-block;
     margin: 5px;
+  }
+}
+
+.form-control {
+  border: 1px solid #AAA;
+  padding: 6px 10px;
+  font-size: 17px;
+  display: block;
+  border-radius: 3px;
+  width: 100%;
+  line-height: 1.5;
+  background-color: #fff;
+  background-image: none;
+  box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+}
+.help-block {
+  margin: 0 0 10px 0;
+  font-size: 90%;
+  &-error {
+    color: #a94442;
+  }
+}
+.has-error {
+  label {
+    color: #a94442;
+  }
+}
+
+.form-group.required .control-label:after {
+  content: " *";
+  color: red;
+}
+
+.btn {
+  border: none;
+  background: $main-color-darker;
+  color: #ffffff;
+  padding: 10px 16px;
+  border-radius: 3px;
+  font-size: 17px;
+  cursor: pointer;
+  &:hover {
+    background: $main-color-darker-over;
   }
 }
 

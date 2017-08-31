@@ -4,9 +4,9 @@
 /* @var $form yii\bootstrap\ActiveForm */
 /* @var $model app\models\ContactForm */
 
+use himiklab\yii2\recaptcha\ReCaptcha;
 use yii\helpers\Html;
 use yii\bootstrap\ActiveForm;
-use yii\captcha\Captcha;
 
 ?>
 <div class="container">
@@ -14,37 +14,27 @@ use yii\captcha\Captcha;
 
     <?php if (Yii::$app->session->hasFlash('contactFormSubmitted')): ?>
 
-        <div class="alert alert-success">
-            Благодарим Вас за обращение к нам. Мы ответим вам как можно скорее.
+        <div style="text-align: center;">
+            Thank you for contacting us. We will reply to you as soon as possible.
         </div>
 
     <?php else: ?>
 
         <?= $this->params['page']->text ?>
 
-        <div class="row">
-            <div class="col-sm-8">
+        <?php $form = ActiveForm::begin(['options' => ['style' => 'max-width: 600px; min-width: 300px; margin: 0 auto;']]); ?>
 
-                <?php $form = ActiveForm::begin(['id' => 'contact-form']); ?>
+            <?= $form->field($model, 'name')->textInput() ?>
 
-                    <?= $form->field($model, 'name')->textInput(['autofocus' => true]) ?>
+            <?= $form->field($model, 'email') ?>
 
-                    <?= $form->field($model, 'email') ?>
+            <?= $form->field($model, 'body')->textarea(['rows' => 6]) ?>
 
-                    <?= $form->field($model, 'body')->textarea(['rows' => 6]) ?>
+            <?= $form->field($model, 'reCaptcha')->widget(ReCaptcha::className()) ?>
 
-                    <?= $form->field($model, 'verifyCode')->widget(Captcha::className(), [
-                        'template' => '<div class="row"><div class="col-lg-3">{image}</div><div class="col-lg-6">{input}</div></div>',
-                    ]) ?>
+            <?= Html::submitButton('Submit', ['class' => 'btn btn-primary', 'name' => 'contact-button']) ?>
 
-                    <div class="form-group">
-                        <?= Html::submitButton('Submit', ['class' => 'btn btn-primary', 'name' => 'contact-button']) ?>
-                    </div>
-
-                <?php ActiveForm::end(); ?>
-
-            </div>
-        </div>
+        <?php ActiveForm::end(); ?>
 
     <?php endif; ?>
 </div>

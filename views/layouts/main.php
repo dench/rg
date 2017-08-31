@@ -47,7 +47,17 @@ SiteAsset::register($this);
 </div>
 <footer>
     <div class="container">
-        <a href="<?= Url::home() ?>"><?= Yii::$app->name ?></a> © 2016-2017
+        <div class="row">
+            <div class="col">
+
+            </div>
+            <div class="col">
+                <a href="<?= Url::home() ?>"><?= Yii::$app->name ?></a> © 2016-2017
+            </div>
+            <div class="col">
+                <a class="contact-us" href="<?= Url::to(['/site/contacts']) ?>"><?= Yii::t('app', 'Contact us') ?></a>
+            </div>
+        </div>
     </div>
 </footer>
 <?= $this->render('_counters') ?>
