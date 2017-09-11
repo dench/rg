@@ -632,12 +632,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/dench/yii2-page.git",
-                "reference": "64e5c9b047cfc631ad4a103776b9b55fea925a24"
+                "reference": "9cbcb124e84f507490698eb8f558783911700be6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/dench/yii2-page/zipball/64e5c9b047cfc631ad4a103776b9b55fea925a24",
-                "reference": "64e5c9b047cfc631ad4a103776b9b55fea925a24",
+                "url": "https://api.github.com/repos/dench/yii2-page/zipball/9cbcb124e84f507490698eb8f558783911700be6",
+                "reference": "9cbcb124e84f507490698eb8f558783911700be6",
                 "shasum": ""
             },
             "require": {
@@ -671,7 +671,7 @@
                 "page",
                 "yii2"
             ],
-            "time": "2017-08-14 17:28:28"
+            "time": "2017-09-10 16:06:48"
         },
         {
             "name": "dench/yii2-sortable",
@@ -1663,16 +1663,16 @@
         },
         {
             "name": "yiisoft/yii2-debug",
-            "version": "2.0.9",
+            "version": "2.0.11",
             "source": {
                 "type": "git",
                 "url": "https://github.com/yiisoft/yii2-debug.git",
-                "reference": "647be6c9d48dc2f3c2e2f33b9eba0a4ca78abde9"
+                "reference": "372fbf0d47303b7d68275d6720935e5116915418"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yiisoft/yii2-debug/zipball/647be6c9d48dc2f3c2e2f33b9eba0a4ca78abde9",
-                "reference": "647be6c9d48dc2f3c2e2f33b9eba0a4ca78abde9",
+                "url": "https://api.github.com/repos/yiisoft/yii2-debug/zipball/372fbf0d47303b7d68275d6720935e5116915418",
+                "reference": "372fbf0d47303b7d68275d6720935e5116915418",
                 "shasum": ""
             },
             "require": {
@@ -1706,7 +1706,7 @@
                 "debugger",
                 "yii2"
             ],
-            "time": "2017-02-21T10:30:50+00:00"
+            "time": "2017-09-05T23:21:05+00:00"
         },
         {
             "name": "yiisoft/yii2-faker",

@@ -2,6 +2,7 @@
 
 namespace app\controllers;
 
+use dench\page\models\Page;
 use Yii;
 use yii\helpers\Url;
 use yii\web\Controller;
@@ -14,11 +15,17 @@ class SitemapController extends Controller
         Yii::$app->response->format = Response::FORMAT_RAW;
         Yii::$app->response->headers->add('Content-Type', 'text/xml');
 
-        $urls = [];
-
         $urls[] = [
             'loc' => Url::home('https'),
         ];
+
+        $pages = Page::find()->select(['slug'])->where(['enabled' => Page::ENABLED])->andWhere(['id' => Yii::$app->params['sitemap']['page']])->asArray()->all();
+
+        foreach ($pages as $page) {
+            $urls[] = [
+                'loc' => Url::to(['/site/page', 'slug' => $page['slug']], 'https'),
+            ];
+        }
 
         return $this->renderPartial('index', [
             'urls' => $urls,
