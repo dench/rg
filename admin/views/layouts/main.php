@@ -33,7 +33,7 @@ AdminAsset::register($this);
 <?php $this->beginBody() ?>
 <div class="wrap">
     <?php
-    if (!empty(Yii::$app->user->identity->getId())) {
+    if (!empty(Yii::$app->user->identity)) {
         NavBar::begin([
             'brandLabel' => Yii::t('app', 'Admin'),
             'brandUrl' => ['/admin/default/index'],
