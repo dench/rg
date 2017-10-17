@@ -33,26 +33,28 @@ AdminAsset::register($this);
 <?php $this->beginBody() ?>
 <div class="wrap">
     <?php
-    NavBar::begin([
-        'brandLabel' => Yii::t('app', 'Admin'),
-        'brandUrl' => ['/admin/default/index'],
-        'options' => [
-            'class' => 'navbar-inverse navbar-static-top',
-        ],
-    ]);
-    echo Nav::widget([
-        'options' => ['class' => 'navbar-nav navbar-right'],
-        'items' => [
-            ['label' => Yii::t('app', 'Pages'), 'url' => ['/admin/page/default/index']],
-            ['label' => Yii::t('app', 'Team'), 'url' => ['/admin/team/index']],
-            ['label' => Yii::t('app', 'Blocks'), 'url' => ['/admin/block/default/index']],
-            ['label' => Yii::t('app', 'Setting'), 'url' => '#', 'items' => [
+    if (Yii::$app->user->identity->getId()) {
+        NavBar::begin([
+            'brandLabel' => Yii::t('app', 'Admin'),
+            'brandUrl' => ['/admin/default/index'],
+            'options' => [
+                'class' => 'navbar-inverse navbar-static-top',
+            ],
+        ]);
+        echo Nav::widget([
+            'options' => ['class' => 'navbar-nav navbar-right'],
+            'items' => [
+                ['label' => Yii::t('app', 'Pages'), 'url' => ['/admin/page/default/index']],
+                ['label' => Yii::t('app', 'Team'), 'url' => ['/admin/team/index']],
+                ['label' => Yii::t('app', 'Blocks'), 'url' => ['/admin/block/default/index']],
+                ['label' => Yii::t('app', 'Setting'), 'url' => '#', 'items' => [
 
-            ]],
-            ['label' => Yii::t('app', 'Home'), 'url' => ['/site/index']],
-        ],
-    ]);
-    NavBar::end();
+                ]],
+                ['label' => Yii::t('app', 'Home'), 'url' => ['/site/index']],
+            ],
+        ]);
+        NavBar::end();
+    }
     ?>
 
     <div class="container">
