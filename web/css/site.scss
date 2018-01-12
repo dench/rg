@@ -265,11 +265,26 @@ section {
     .col {
       width: (100% / 2);
       padding: 8px;
-      @media (min-width: $min-xs) {
-        width: (100% / 4);
+      @media (max-width: $max-xs) {
+        &:nth-child(7) {
+          margin-left: (100% / 4);
+        }
       }
-      @media (min-width: $min-lg) {
-        width: (100% / 6);
+      @media (min-width: $min-xs) {
+        width: (100% / 3);
+        padding: 8px 20px 20px 20px;
+        @media (max-width: $max-md) {
+          &:nth-child(7) {
+            margin-left: (100% / 3);
+          }
+        }
+      }
+      @media (min-width: $min-md) {
+        width: (100% / 4);
+        padding: 8px 40px 40px 40px;
+        &:nth-child(5) {
+          margin-left: (100% / 8);
+        }
       }
     }
     img {
