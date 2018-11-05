@@ -52,7 +52,7 @@ SiteAsset::register($this);
 
             </div>
             <div class="col">
-                <a href="<?= Url::home() ?>"><?= Yii::$app->name ?></a> © 2016-2017
+                <a href="<?= Url::home() ?>"><?= Yii::$app->name ?></a> © 2016-<?= date('Y') ?>
             </div>
             <div class="col">
                 <a class="contact-us" href="<?= Url::to(['/site/contacts']) ?>"><?= Yii::t('app', 'Contact us') ?></a>
