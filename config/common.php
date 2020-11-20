@@ -12,6 +12,10 @@ return [
     'language' => 'en',
     'sourceLanguage' => 'en',
     'bootstrap' => ['log'],
+    'aliases' => [
+        '@bower' => '@vendor/bower-asset',
+        '@npm'   => '@vendor/npm-asset',
+    ],
     'modules' => [
         'admin' => [
             'class' => 'app\admin\Module',
