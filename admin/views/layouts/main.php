@@ -10,7 +10,6 @@
 /* @var $content string */
 
 use app\assets\AdminAsset;
-use app\assets\CommonAsset;
 use app\widgets\Alert;
 use yii\bootstrap\Nav;
 use yii\bootstrap\NavBar;
